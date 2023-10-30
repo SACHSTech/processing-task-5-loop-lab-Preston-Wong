@@ -97,24 +97,24 @@ public class Sketch extends PApplet {
     int intY;
     int intColour;
     
-      for(int intRow = 303; intRow < 600; intRow+= 10){
-        for(int intColumn = 303; intColumn < 600; intColumn += 10){
-          intX = intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
-          intY = intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
-          intColour = (intX / 10) % 10;
+    for(int intRow = 303; intRow < 600; intRow+= 10){
+      for(int intColumn = 303; intColumn < 600; intColumn += 10){
+        intX = intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
+        intColour = (intX / 10) % 10;
 
-          if (intColour % 2 ==0) {
+        if (intColour % 2 ==0) {
           fill(255);
-          } else {
+        } else {
           fill(0);
-          }
-          noStroke();
-          rect(intX, intY, 5, 5);
         }
-      } 
-    } 
- 
       
+        noStroke();
+        rect(intX, intY, 5, 5);
+    }
+  } 
+} 
+ 
 
   /**
    * Use the modulus operator and an if/else statement to select the color.
@@ -126,22 +126,22 @@ public class Sketch extends PApplet {
     int intY;
     int intColour;
     
-      for(int intRow = 603; intRow < 900; intRow+= 10){
-        for(int intColumn = 303; intColumn < 600; intColumn += 10){
-          intX = intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
-          intY = intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
-          intColour = (intY / 10) % 10;
+    for(int intRow = 603; intRow < 900; intRow+= 10){
+      for(int intColumn = 303; intColumn < 600; intColumn += 10){
+        intX = intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
+        intColour = (intY / 10) % 10;
 
-          if (intColour % 2 ==0) {
+        if (intColour % 2 ==0) {
           fill(0);
-          } else {
+        } else {
           fill(255);
-          }
-          noStroke();
-          rect(intX, intY, 5, 5);
         }
-      } 
-      } 
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    } 
+  } 
 
   /**
    * Use the modulus operator and just one 'if' statement to select the color.
@@ -150,30 +150,28 @@ public class Sketch extends PApplet {
 
     int intX = 0;
     int intY = 0;
-
-   for(int intRow = 903; intRow < 1200; intRow+= 10){
-      for(int intColumn = 303; intColumn < 600; intColumn+= 10){
+    int intColour1;
+    int intColour2;
+    
+    for(int intRow = 903; intRow < 1200; intRow+= 10){
+      for(int intColumn = 303; intColumn < 600; intColumn += 10){
         intX = intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
         intY = intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
+        intColour1 = (intX / 10) % 10;
+        intColour2 = (intY / 10) % 10;
 
-        fill(0);
+          if (intColour1 % 2 ==0) {
+            fill(0);
+          } else if (intColour2 % 2 ==0) {
+            fill(0);
+          } else {
+            fill(255);
+          }
         noStroke();
         rect(intX, intY, 5, 5);
-
       }
     }
-    for(int intRow = 903; intRow < 1200; intRow+= 20){
-      for(int intColumn = 313; intColumn < 600; intColumn+= 20){
-        intX = intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
-
-        fill(255);
-        noStroke();
-        rect(intX, intY, 5, 5);
-
-      }
-    }
-  }
+  } 
 
   /**
    * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
@@ -182,19 +180,7 @@ public class Sketch extends PApplet {
 
     int intX = 0;
     int intY = 0;
-/*
-    for(int intColumn = 3; intColumn <= 310 ; intColumn += 10){
-      for(int intRow = 3; intRow < intColumn; intRow += 10){
-        intX = intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = intColumn - 10; //Instead of zero, calculate the proper intY location using 'intColumn'
 
-        fill(255);
-        noStroke();
-        rect(intX, intY, 5, 5);
-
-      }
-    }    
-*/
     for(int intRow = 300; intRow > 0; intRow -= 10){
       for(int intColumn = 0; intColumn < intRow; intColumn += 10){
         intX = intRow - 7;  //Instead of zero, calculate the proper intX location using 'intRow'
