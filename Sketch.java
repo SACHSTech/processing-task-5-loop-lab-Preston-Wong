@@ -1,5 +1,10 @@
 import processing.core.PApplet;
 
+/**
+ * Print the 8 differnt patterns in the 8 different regions in the canvas
+ * @author: Preston Wong
+ *
+ */
 public class Sketch extends PApplet {
 	
 	
@@ -42,10 +47,7 @@ public class Sketch extends PApplet {
     draw_section6();
     draw_section7();
     draw_section8();
-
-    
   }
-
 
   /**
    * Draw the outlines for all sections
@@ -93,8 +95,7 @@ public class Sketch extends PApplet {
 
     int intX = 303;
     int intY = 303;
-
-    if ((intX >= 313) && (intY >= 303)){
+    
       for(int intRow = 313; intRow < 600; intRow+= 20){
         for(int intColumn = 303; intColumn < 600; intColumn+= 10){
           intX = intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
@@ -105,17 +106,16 @@ public class Sketch extends PApplet {
           rect(intX, intY, 5, 5);
         } 
       } 
-    } else {
-        for(int intRow = 303; intRow < 600; intRow+= 20){
-          for(int intColumn = 303; intColumn < 600; intColumn+= 10){
-            intX = intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
-            intY = intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
+ 
+      for(int intRow = 303; intRow < 600; intRow+= 20){
+        for(int intColumn = 303; intColumn < 600; intColumn+= 10){
+          intX = intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
+          intY = intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
+            
+          fill(255);
+          noStroke();
+          rect(intX, intY, 5, 5);
 
-            fill(255);
-            noStroke();
-            rect(intX, intY, 5, 5);
-
-      }
     }
   }
 }
