@@ -72,6 +72,8 @@ public class Sketch extends PApplet {
   /**
    * draws the bottom left section
    */
+
+  // prints out the white grid in quadrant 1
   public void draw_section1(){
     int intX;
     int intY;
@@ -87,10 +89,13 @@ public class Sketch extends PApplet {
       }
     }
   }
+
   /**
    * Use the modulus operator and an if statement to select the color
    * Don't loop from 30 to 60 to shift everything over, just add 300 to x.
    */
+
+  // prints out an alternating grid of white and black lines horizontally in quadrant 2
   public void draw_section2(){
 
     int intX;
@@ -111,15 +116,16 @@ public class Sketch extends PApplet {
       
         noStroke();
         rect(intX, intY, 5, 5);
-    }
+      }
+    } 
   } 
-} 
  
-
   /**
    * Use the modulus operator and an if/else statement to select the color.
    * Don't use multiple 'if' statements.
    */
+
+  // prints out a grid of alternating white and black lines going vertically 
   public void draw_section3(){
 
     int intX;
@@ -146,6 +152,8 @@ public class Sketch extends PApplet {
   /**
    * Use the modulus operator and just one 'if' statement to select the color.
    */
+
+  // prints out a grid of black lines with white dots in every other row and column in quadrant 4
   public void draw_section4(){
 
     int intX = 0;
@@ -176,24 +184,27 @@ public class Sketch extends PApplet {
   /**
    * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
    */
+
+  // prints out a right angle tirangle in quadrant 5 that is the reflection of the triangle in qudrant 6
   public void draw_section5(){
 
-    int intX = 0;
-    int intY = 0;
+    int intX;
+    int intY;
 
-    for(int intRow = 300; intRow > 0; intRow -= 10){
-      for(int intColumn = 0; intColumn < intRow; intColumn += 10){
-        intX = intRow - 7;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = intColumn + 3; //Instead of zero, calculate the proper intY location using 'intColumn'
+    for(int intColumn = 3; intColumn < 300 ; intColumn += 10){
+      for(int intRow = 0; intRow < intColumn; intRow += 10){
+        intX = intRow + 3;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
 
         fill(255);
         noStroke();
         rect(intX, intY, 5, 5);
 
       }
-    }    
+    }
   }
   
+  // prints out a right anble triangle that is the reflection of the triangle in qudrant 5
   public void draw_section6(){
 
   int intX = 0;
@@ -212,12 +223,25 @@ public class Sketch extends PApplet {
     }    
   }
 
+  // prints out the triangle that is ther oppostive of the triangle in quadrant 8
   public void draw_section7(){
+  int intX = 0;
+  int intY = 0;
 
+  for(int intRow = 603; intRow < 900; intRow += 10){
+    for(int intColumn = intRow; intColumn < 900; intColumn += 10){
+      intX = intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
+      intY = intColumn - 600; //Instead of zero, calculate the proper intY location using 'intColumn'
 
-    
+      fill(255);
+      noStroke();
+      rect(intX, intY, 5, 5);
+
+      }
+    }
   }
   
+  // prints out a triangle that is the opposite of the triangle in qudrant 7
   public void draw_section8(){
 
   int intX = 0;
